@@ -60,6 +60,18 @@ body {
 	align-items: center;
 	background: #fff;
 }
+
+.compare-images-page .holder-place {
+	display: flex;
+	flex-direction: row;
+}
+.compare-images-page .text-holder {
+	width: 360px;
+	margin: 8px;
+}
+.compare-images-page .text-holder img {
+	width: 100%;
+}
 .pricing-page {
 	position: relative;
 	height: 100vh;
