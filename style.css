@@ -240,10 +240,31 @@ a:visited {
 	margin-bottom: 5px;
 }
 footer {
-	background: grey;
+	background: url(/assets/images/updated_bg_2.png);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	width: 100vw;
-	height: 15vh;
-	position: absolute;
-	bottom: 0;
-	left: 0;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer-content-box {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.footer-content-box ul {
+	width: 60%;
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	list-style-type: none;
+	padding: 0;
 }
