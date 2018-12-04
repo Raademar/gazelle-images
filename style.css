@@ -61,9 +61,12 @@ body {
 .compare-images-page .holder-place {
 	display: flex;
 	flex-direction: row;
-	width: 360px;
 }
-.compare-images-page .holder-place img {
+.compare-images-page .text-holder {
+	width: 360px;
+	margin: 8px;
+}
+.compare-images-page .text-holder img {
 	width: 100%;
 }
 .pricing-page {
