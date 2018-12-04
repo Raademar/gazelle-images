@@ -308,10 +308,7 @@ footer {
 */
 
 nav.navbar a {
-	font-size: 20px;
-	color: #584E4A;
 	position: relative;
-	text-transform: uppercase;
 	text-decoration: none;
 	padding-bottom: 8px;
 	color: #eee;
