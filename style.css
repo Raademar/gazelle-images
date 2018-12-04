@@ -57,6 +57,15 @@ body {
 	align-items: center;
 	background: #fff;
 }
+
+.compare-images-page .holder-place {
+	display: flex;
+	flex-direction: row;
+	width: 360px;
+}
+.compare-images-page .holder-place img {
+	width: 100%;
+}
 .pricing-page {
 	position: relative;
 	height: 100vh;
