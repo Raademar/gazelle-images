@@ -77,7 +77,7 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   .compare-images-page{
     height: 100vh;
   }
@@ -282,7 +282,7 @@ h3 {
 /* END */
 a {
 	text-decoration: none;
-
+  
 }
 a:visited {
 	text-decoration: none;
@@ -393,6 +393,71 @@ footer {
 	padding: 0;
 }
 
+.modal{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  
+}
+
+.modal .content{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  width: 80vw;
+  max-width: 768px;
+  left:0;
+  right:0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left:auto;
+  margin-right:auto;
+  padding: 16px;
+  z-index: 101;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.50);
+}
+
+.modal .content h1 {
+  font-size: 22px;
+}
+
+.modal .content p {
+  font-size: 1€px;
+  max-width: 600px;
+}
+.modal .content label{
+  color: #555;
+  font-size: 10px;
+}
+
+.modal .content input{
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-bottom-color: #444444;
+}
+
+.modal .content button[type="submit"]{
+  width: 100%;
+}
+
+.modal .content .text-center{
+  text-align: center;
+}
+
+.modal .background{
+  background: #2222229c;
+  width: 100%;
+  height: 100%;
+}
+
+.modal:not(.open){
+  display: none;
+}
 
 /*
 * Nav hover underline-effect
@@ -416,7 +481,7 @@ nav.navbar a:before, nav.navbar a:after {
 nav.navbar a:before {
 	opacity: 0;
 	-webkit-transform: translateY(-8px);
-			transform: translateY(-8px);
+  transform: translateY(-8px);
 	transition: opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s;
 	transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -424,7 +489,7 @@ nav.navbar a:before {
 nav.navbar a:after {
 	opacity: 0;
 	-webkit-transform: translateY(4px);
-			transform: translateY(4px);
+  transform: translateY(4px);
 	transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
 	transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -432,7 +497,7 @@ nav.navbar a:after {
 nav.navbar a:hover:before, nav.navbar a:hover:after, nav.navbar a:focus:before, nav.navbar a:focus:after {
 	opacity: 1;
 	-webkit-transform: translateY(0);
-			transform: translateY(0);
+  transform: translateY(0);
 }
 nav.navbar a:hover:before, nav.navbar a:focus:before {
 	transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
