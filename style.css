@@ -247,7 +247,8 @@ a:visited {
 }
 .pricing-placeholder {
 	width: 270px;
-	height: 450px;
+  height: 450px;
+  border-radius: 5px;
 	background: url('assets/images/updated_bg_2.png');
 	background-size: cover;
 	background-position: center;
