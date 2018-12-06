@@ -450,6 +450,16 @@ footer {
   display: none;
 }
 
+@media screen and (max-width: 500px) {
+  .documentation-box {
+    width: 100%;
+  }
+  .footer-content-box ul {
+    flex-flow: wrap;
+    width: 10%;
+  }
+}
+
 /*
 * Nav hover underline-effect
 */
