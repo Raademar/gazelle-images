@@ -5,6 +5,9 @@ body {
 	box-sizing: border-box;
 	overflow-x: hidden;
 }
+.no-scroll {
+  overflow-y: hidden;
+}
 .landing-page {
 	height: 100vh;
 	width: 100vw;
@@ -16,7 +19,14 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	align-items: center;
+  align-items: center;
+  position: relative;
+}
+.section-1-bottom-left {
+  position: absolute;
+	bottom: 0px;
+	left: 0;
+  width: 15%;
 }
 
 @media screen and (min-width: 600px) {
@@ -35,7 +45,7 @@ body {
 }
 .section-2-top-left {
 	position: absolute;
-	top: 0;
+	top: -1px;
 	left: 0;
 	width: 15%;
 }
@@ -181,7 +191,7 @@ body {
   width: 35vw;
   height: 50vh;
   background: url('/assets/images/hero_image.jpg');
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 5px;
@@ -194,9 +204,10 @@ body {
   top: 0;
   left: 0;
   background: url('/assets/images/hero_image_pixelated.png');
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 5px;  
   z-index: 99;
   animation-name: fadeOut;
   animation-duration: 8s;

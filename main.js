@@ -1,6 +1,35 @@
+const modal = document.querySelector('.modal');
+const modalContent = document.querySelector('.modal .content');
+const modalBackground = document.querySelector('.modal .background');
+const getStartedBtns = document.querySelectorAll('.get-started'); 
+const body = document.body
+let currentScrollPosFromTop = document.documentElement.scrollTop
 
-  
-  // Declare global variables
+function windowOnClick(event) {
+  if(event.target != modalContent) {
+    modal.classList.remove('open')
+    body.classList.remove('.no-scroll')
+  }
+}
+
+function noscroll() {
+  window.scrollTo({
+    top: currentScrollPosFromTop,
+    left: currentScrollPosFromTop,
+  });
+}
+
+getStartedBtns.forEach(button => button.addEventListener('click', (event) => {
+  modal.classList.add('open')
+  body.classList.add('.no-scroll')
+}))
+
+modal.addEventListener('click', windowOnClick)
+
+
+
+
+  // // Declare global variables
   let keys = {37: 1, 38: 1, 39: 1, 40: 1};
   
   // Swiper init
@@ -26,11 +55,11 @@
       disableScroll();
     }
     
-    const closeModal = () => {
-      modal.classList.remove('open');
-      // modalBackground.removeEventListener('click');
-      enableScroll();
-    }
+  //   const closeModal = () => {
+  //     modal.classList.remove('open');
+  //     // modalBackground.removeEventListener('click');
+  //     enableScroll();
+  //   }
     
     if(state === 'open'){
       openModal();
