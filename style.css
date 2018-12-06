@@ -200,13 +200,25 @@ h3 {
 	color: #fff;
 	font-size: 1rem;
 }
+.pricing {
+	background: #fff;
+	color: #0FB9B1;
+	font-size: 1rem;
+	-webkit-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
 .primary:hover {
 	transform: scale(1.1);
 	cursor: pointer;
   box-shadow: 0 12px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.3);
 }
 .secondary:hover {
-	transform: scale(1.2);
+	transform: scale(1.1);
+	cursor: pointer;
+}
+.pricing:hover {
+	transform: scale(1.1);
 	cursor: pointer;
 }
 /* END */
@@ -234,10 +246,29 @@ a:visited {
 	margin: 5px;
 }
 .pricing-placeholder {
-	width: 205px;
-	height: 355px;
-	background: grey;
+	width: 270px;
+	height: 450px;
+	background: url('assets/images/updated_bg_2.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	margin: 5px;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+}
+.pricing-placeholder h3 {
+	font-weight: 400;
+}
+.pricing-placeholder h5 {
+	font-weight: 300;
+}
+.pricing-placeholder span {
+	font-size: 1.7rem;
+	font-weight: 500;
 }
 .text-holder {
 	display: flex;
@@ -292,10 +323,7 @@ footer {
 */
 
 nav.navbar a {
-	font-size: 20px;
-	color: #584E4A;
 	position: relative;
-	text-transform: uppercase;
 	text-decoration: none;
 	padding-bottom: 8px;
 	color: #eee;
