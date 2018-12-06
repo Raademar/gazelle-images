@@ -16,16 +16,13 @@
   */
   const toggleModal = (state) => {
     const modal = document.querySelector('.modal');
-    const modalContent = document.querySelector('.modal .content');
     const modalBackground = document.querySelector('.modal .background');
     
     const openModal = () => {
       modal.classList.add('open');
-      
       modalBackground.addEventListener('click', () => {
         closeModal();
       });
-      
       disableScroll();
     }
     
@@ -35,17 +32,11 @@
       enableScroll();
     }
     
-    switch(state){
-      case 'open':
+    if(state === 'open'){
       openModal();
-      break;
-      
-      case 'close':
+    }else if(state === 'close'){
       closeModal();
-      break;
-      
-      case 'toggle':
-      default:
+    }else{
       if(modal.classList.contains('open')){
         closeModal();
       }else{
@@ -55,10 +46,7 @@
   };
 
   const getStartedBtns = document.querySelectorAll('.get-started'); 
-  getStartedBtns.forEach(btn => {
-    console.log('added eventlistenser');
-    btn.addEventListener('click', toggleModal('open'));
-  });
+  getStartedBtns.forEach(btn => btn.addEventListener('click', () => {toggleModal('open')}));
   
   // Smooth scroll to anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
