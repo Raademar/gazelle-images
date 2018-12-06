@@ -1,36 +1,10 @@
 const modal = document.querySelector('.modal');
-const modalContent = document.querySelector('.modal .content');
-const modalBackground = document.querySelector('.modal .background');
-const getStartedBtns = document.querySelectorAll('.get-started'); 
-const body = document.body
-let currentScrollPosFromTop = document.documentElement.scrollTop
-
-// function windowOnClick(event) {
-//   if(event.target != modalContent) {
-//     modal.classList.remove('open')
-//     body.classList.remove('.no-scroll')
-//   }
-// }
-
-// function noscroll() {
-//   window.scrollTo({
-//     top: currentScrollPosFromTop,
-//     left: currentScrollPosFromTop,
-//   });
-// }
-
-// getStartedBtns.forEach(button => button.addEventListener('click', (event) => {
-//   modal.classList.add('open')
-//   body.classList.add('.no-scroll')
-// }))
-
-// modal.addEventListener('click', windowOnClick)
-
-
-
-
-  // // Declare global variables
-  let keys = {37: 1, 38: 1, 39: 1, 40: 1};
+const modalContent            = document.querySelector('.modal .content');
+const modalBackground         = document.querySelector('.modal .background');
+const getStartedBtns          = document.querySelectorAll('.get-started');
+let   keys                    = {37: 1, 38: 1, 39: 1, 40: 1};                  // Keys to disable scroll
+const body                    = document.body
+let   currentScrollPosFromTop = document.documentElement.scrollTop
   
   // Swiper init
   const swiper = new Swiper('.swiper-container', {
@@ -44,7 +18,7 @@ let currentScrollPosFromTop = document.documentElement.scrollTop
   * @param {string} state Sets the state of the modal, etc: open, close, toggle
   */
   const toggleModal = (state) => {
-    const modal = document.querySelector('.modal');
+    const modal           = document.querySelector('.modal');
     const modalBackground = document.querySelector('.modal .background');
     
     const openModal = () => {
@@ -92,7 +66,7 @@ let currentScrollPosFromTop = document.documentElement.scrollTop
     e = e || window.event;
     if (e.preventDefault)
     e.preventDefault();
-    e.returnValue = false;  
+    e.returnValue = false;
   }
   
   function preventDefaultForScrollKeys(e) {
@@ -105,19 +79,19 @@ let currentScrollPosFromTop = document.documentElement.scrollTop
   function disableScroll() {
     if (window.addEventListener) // older FF
     window.addEventListener('DOMMouseScroll', preventDefault, false);
-    window.onwheel = preventDefault; // modern standard
-    window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-    window.ontouchmove  = preventDefault; // mobile
+    window.onwheel      = preventDefault;                          // modern standard
+    window.onmousewheel = document.onmousewheel = preventDefault;  // older browsers, IE
+    window.ontouchmove  = preventDefault;                          // mobile
     document.onkeydown  = preventDefaultForScrollKeys;
   }
   
   function enableScroll() {
     if (window.removeEventListener)
     window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    window.onmousewheel = document.onmousewheel = null; 
-    window.onwheel = null; 
-    window.ontouchmove = null;  
-    document.onkeydown = null;  
+    window.onmousewheel = document.onmousewheel = null;
+    window.onwheel      = null;
+    window.ontouchmove  = null;
+    document.onkeydown  = null;
   }
   
 
