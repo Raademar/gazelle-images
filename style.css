@@ -6,7 +6,7 @@ body {
 	overflow-x: hidden;
 }
 .no-scroll {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .landing-page {
 	height: 100vh;
@@ -14,7 +14,7 @@ body {
 	background: url('/assets/images/updated_bg_shawed.png');
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+  background-size: cover;
 	color: #fff;
 	display: flex;
 	flex-direction: row;
@@ -393,6 +393,16 @@ footer {
 	align-content: center;
 	list-style-type: none;
 	padding: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .documentation-box {
+    width: 100%;
+  }
+  .footer-content-box ul {
+    flex-flow: wrap;
+    width: 10%;
+  }
 }
 
 .modal{

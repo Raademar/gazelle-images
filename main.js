@@ -8,22 +8,13 @@ let currentScrollPosFromTop = document.documentElement.scrollTop
 function windowOnClick(event) {
   if(event.target != modalContent) {
     modal.classList.remove('open')
-    body.classList.remove('.no-scroll')
+    body.style.overflow = 'unset'
   }
 }
-
-function noscroll() {
-  window.scrollTo({
-    top: currentScrollPosFromTop,
-    left: currentScrollPosFromTop,
-  });
-}
-
 getStartedBtns.forEach(button => button.addEventListener('click', (event) => {
   modal.classList.add('open')
-  body.classList.add('.no-scroll')
+  body.style.overflow = 'hidden' 
 }))
-
 modal.addEventListener('click', windowOnClick)
 
 
