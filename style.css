@@ -74,7 +74,7 @@ h1,h2,h3,h4,h5,h6{
 	width: 100% !important;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 840px){
   .swiper-container {
     width: 96vw !important;
   }
