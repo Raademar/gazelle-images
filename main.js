@@ -5,26 +5,26 @@ const getStartedBtns = document.querySelectorAll('.get-started');
 const body = document.body
 let currentScrollPosFromTop = document.documentElement.scrollTop
 
-function windowOnClick(event) {
-  if(event.target != modalContent) {
-    modal.classList.remove('open')
-    body.classList.remove('.no-scroll')
-  }
-}
+// function windowOnClick(event) {
+//   if(event.target != modalContent) {
+//     modal.classList.remove('open')
+//     body.classList.remove('.no-scroll')
+//   }
+// }
 
-function noscroll() {
-  window.scrollTo({
-    top: currentScrollPosFromTop,
-    left: currentScrollPosFromTop,
-  });
-}
+// function noscroll() {
+//   window.scrollTo({
+//     top: currentScrollPosFromTop,
+//     left: currentScrollPosFromTop,
+//   });
+// }
 
-getStartedBtns.forEach(button => button.addEventListener('click', (event) => {
-  modal.classList.add('open')
-  body.classList.add('.no-scroll')
-}))
+// getStartedBtns.forEach(button => button.addEventListener('click', (event) => {
+//   modal.classList.add('open')
+//   body.classList.add('.no-scroll')
+// }))
 
-modal.addEventListener('click', windowOnClick)
+// modal.addEventListener('click', windowOnClick)
 
 
 
@@ -55,11 +55,11 @@ modal.addEventListener('click', windowOnClick)
       disableScroll();
     }
     
-  //   const closeModal = () => {
-  //     modal.classList.remove('open');
-  //     // modalBackground.removeEventListener('click');
-  //     enableScroll();
-  //   }
+    const closeModal = () => {
+      modal.classList.remove('open');
+      // modalBackground.removeEventListener('click');
+      enableScroll();
+    }
     
     if(state === 'open'){
       openModal();
@@ -74,7 +74,6 @@ modal.addEventListener('click', windowOnClick)
     }
   };
 
-  const getStartedBtns = document.querySelectorAll('.get-started'); 
   getStartedBtns.forEach(btn => btn.addEventListener('click', () => {toggleModal('open')}));
   
   // Smooth scroll to anchor links
