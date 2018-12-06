@@ -46,8 +46,13 @@ body {
 	right: 0;
 	width: 10%;
 }
+
 .swiper-container {
-	width: 60vw !important;
+  width: 60vw !important;
+  border: 1px solid #e6e6e6;
+}
+.swiper-container img{
+  width: 100%;
 }
 .swiper-wrapper {
 	width: 60vw !important;
@@ -56,10 +61,20 @@ body {
 	width: 100% !important;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px){
+  .swiper-container {
+    width: 96vw !important;
+  }
+  .swiper-wrapper {
+    width: 96vw !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .compare-images-page{
     height: 100vh;
   }
+  
 }
 .compare-images-page {
 	position: relative;
