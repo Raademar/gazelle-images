@@ -5,17 +5,26 @@ const getStartedBtns = document.querySelectorAll('.get-started');
 const body = document.body
 let currentScrollPosFromTop = document.documentElement.scrollTop
 
-function windowOnClick(event) {
-  if(event.target != modalContent) {
-    modal.classList.remove('open')
-    body.style.overflow = 'unset'
-  }
-}
-getStartedBtns.forEach(button => button.addEventListener('click', (event) => {
-  modal.classList.add('open')
-  body.style.overflow = 'hidden' 
-}))
-modal.addEventListener('click', windowOnClick)
+// function windowOnClick(event) {
+//   if(event.target != modalContent) {
+//     modal.classList.remove('open')
+//     body.classList.remove('.no-scroll')
+//   }
+// }
+
+// function noscroll() {
+//   window.scrollTo({
+//     top: currentScrollPosFromTop,
+//     left: currentScrollPosFromTop,
+//   });
+// }
+
+// getStartedBtns.forEach(button => button.addEventListener('click', (event) => {
+//   modal.classList.add('open')
+//   body.classList.add('.no-scroll')
+// }))
+
+// modal.addEventListener('click', windowOnClick)
 
 
 
@@ -30,55 +39,42 @@ modal.addEventListener('click', windowOnClick)
     },
   });
   
-  // /**
-  // * toggleModal
-  // * @param {string} state Sets the state of the modal, etc: open, close, toggle
-  // */
-  // const toggleModal = (state) => {
-  //   const modal = document.querySelector('.modal');
-  //   const modalContent = document.querySelector('.modal .content');
-  //   const modalBackground = document.querySelector('.modal .background');
+  /**
+  * toggleModal
+  * @param {string} state Sets the state of the modal, etc: open, close, toggle
+  */
+  const toggleModal = (state) => {
+    const modal = document.querySelector('.modal');
+    const modalBackground = document.querySelector('.modal .background');
     
-  //   const openModal = () => {
-  //     modal.classList.add('open');
-      
-  //     modalBackground.addEventListener('click', () => {
-  //       closeModal();
-  //     });
-      
-  //     disableScroll();
-  //   }
+    const openModal = () => {
+      modal.classList.add('open');
+      modalBackground.addEventListener('click', () => {
+        closeModal();
+      });
+      disableScroll();
+    }
     
-  //   const closeModal = () => {
-  //     modal.classList.remove('open');
-  //     // modalBackground.removeEventListener('click');
-  //     enableScroll();
-  //   }
+    const closeModal = () => {
+      modal.classList.remove('open');
+      // modalBackground.removeEventListener('click');
+      enableScroll();
+    }
     
-  //   switch(state){
-  //     case 'open':
-  //     openModal();
-  //     break;
-      
-  //     case 'close':
-  //     closeModal();
-  //     break;
-      
-  //     case 'toggle':
-  //     default:
-  //     if(modal.classList.contains('open')){
-  //       closeModal();
-  //     }else{
-  //       openModal();
-  //     }
-  //   }
-  // };
+    if(state === 'open'){
+      openModal();
+    }else if(state === 'close'){
+      closeModal();
+    }else{
+      if(modal.classList.contains('open')){
+        closeModal();
+      }else{
+        openModal();
+      }
+    }
+  };
 
-  // const getStartedBtns = document.querySelectorAll('.get-started'); 
-  // getStartedBtns.forEach(btn => {
-  //   console.log('added eventlistenser');
-  //   btn.addEventListener('click', toggleModal('open'));
-  // });
+  getStartedBtns.forEach(btn => btn.addEventListener('click', () => {toggleModal('open')}));
   
   // Smooth scroll to anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

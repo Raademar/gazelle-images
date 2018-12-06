@@ -5,6 +5,10 @@ body {
 	box-sizing: border-box;
 	overflow-x: hidden;
 }
+h1,h2,h3,h4,h5,h6{
+  text-align: center;
+}
+
 .no-scroll {
   overflow: hidden;
 }
@@ -70,7 +74,7 @@ body {
 	width: 100% !important;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 840px){
   .swiper-container {
     width: 96vw !important;
   }
@@ -469,6 +473,16 @@ footer {
 
 .modal:not(.open){
   display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .documentation-box {
+    width: 100%;
+  }
+  .footer-content-box ul {
+    flex-flow: wrap;
+    width: 10%;
+  }
 }
 
 /*
