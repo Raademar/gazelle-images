@@ -312,7 +312,6 @@ a:visited {
 }
 .pricing-placeholder {
   position: relative;
-  cursor: pointer;
 	width: 270px;
   height: 450px;
   border-radius: 5px;
@@ -357,7 +356,6 @@ a:visited {
 .pricing-gazelle {
   position: absolute;
   top:0;
-  left: 0;
   width: 200px;
   height: auto;
 }
@@ -365,12 +363,16 @@ a:visited {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-content: center;
+  align-content: center;
 }
 .text-holder h3 {
 	align-self: center;
 	max-width: 300px;
-	margin: 5px;
+  /* text-shadow: 1px 1px 20px #555; */
+}
+.escape-svg {
+  margin-top: 40px;
+  margin-bottom: -35px;
 }
 .documentation-box {
 	width: 850px;
