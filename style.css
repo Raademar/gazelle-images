@@ -10,7 +10,7 @@ body {
 }
 .landing-page-bg {
   position: absolute;
-  top: -410px;
+  top: -420px;
   transform: rotate(20deg);
 }
 .landing-page {
@@ -282,10 +282,10 @@ h3 {
 	transform: scale(1.1);
 	cursor: pointer;
 }
-/* .pricing:hover {
+.pricing:hover {
 	transform: scale(1.1);
 	cursor: pointer;
-} */
+}
 /* END */
 a {
 	text-decoration: none;
@@ -311,6 +311,7 @@ a:visited {
 	margin: 5px;
 }
 .pricing-placeholder {
+  position: relative;
   cursor: pointer;
 	width: 270px;
   height: 450px;
@@ -329,10 +330,10 @@ a:visited {
   text-align: center;
   transition: transform .3s, box-shadow .35s;
 }
-.pricing-placeholder:hover{
+/* .pricing-placeholder:hover{
   transform: scale(1.02);
   box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.50);
-}
+} */
 
 .pricing-placeholder.one{
   background: linear-gradient(135deg, #fa8231 0%,#f7b731 100%);
@@ -352,6 +353,13 @@ a:visited {
 .pricing-placeholder span {
 	font-size: 1.7rem;
 	font-weight: 500;
+}
+.pricing-gazelle {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 200px;
+  height: auto;
 }
 .text-holder {
 	display: flex;

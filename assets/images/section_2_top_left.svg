@@ -1,1 +1,20 @@
-<svg id="triangles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 494.5"><defs><style>.cls-1{fill:#f93;}.cls-2{fill:#fc3;}</style></defs><title>section_2_top_left</title><polygon class="cls-1" points="1 1 257 318 1 324 1 1"/><polygon class="cls-2" points="257.5 317.5 0.5 494.5 1.5 323.5 257.5 317.5"/><polygon class="cls-2" points="257.5 318.5 360 0 0 0 257.5 318.5"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 360 494.5" style="enable-background:new 0 0 360 494.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:#FF9933;}
+	.st2{display:inline;fill:#FFCC33;}
+	.st3{fill:#FFCC33;}
+</style>
+<g id="triangles" class="st0">
+	<title>section_2_top_left</title>
+	<polygon class="st1" points="1,1 257,318 1,324 	"/>
+	<polygon class="st2" points="257.5,317.5 0.5,494.5 1.5,323.5 	"/>
+	<polygon class="st2" points="257.5,318.5 360,0 0,0 	"/>
+</g>
+<g id="Layer_2">
+	<polygon class="st3" points="0,18.3 256,323 0,323 	"/>
+</g>
+</svg>
