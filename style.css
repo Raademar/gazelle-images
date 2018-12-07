@@ -3,23 +3,20 @@ body {
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
-h1,h2,h3,h4,h5,h6{
-  text-align: center;
-}
-
 .no-scroll {
   overflow: hidden;
+}
+.landing-page-bg {
+  position: absolute;
+  top: -410px;
+  transform: rotate(20deg);
 }
 .landing-page {
 	height: 100vh;
 	width: 100vw;
-	background: url('/assets/images/updated_bg_shawed.png');
-	background-position: center;
-	background-repeat: no-repeat;
-  background-size: cover;
-	color: #fff;
+  color: #fff;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -39,13 +36,16 @@ h1,h2,h3,h4,h5,h6{
   }
 }
 .code-snippet-page {
+  /* background: url('/assets/images/updated_bg_shawed.png');
+	background-position: 90% 10%;
+	background-repeat: no-repeat;
+  background-size: cover; */
 	position: relative;
 	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background: #fff;
 }
 .section-2-top-left {
 	position: absolute;
@@ -189,7 +189,8 @@ h1,h2,h3,h4,h5,h6{
 }
 .hero-text {
 	line-height: 2rem;
-	text-align: left;
+  text-align: left;
+  z-index: 10;
 }
 .image-preview {
   width: 35vw;
