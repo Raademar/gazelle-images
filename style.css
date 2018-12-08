@@ -476,14 +476,15 @@ footer {
   padding: 8px;
   border: 1px solid transparent;
 	border-bottom-color: #444444;
-	transition: .2s ease-in-out all;
+	transition: .1s ease-in-out all;
 }
 .modal .content input:focus {
 	border-bottom-color: #0FB9B1;
 }
 
 .modal .content button[type="submit"]{
-  width: 100%;
+	width: 100%;
+	margin-top: 10px;
 }
 
 .modal .content .text-center{
@@ -627,8 +628,5 @@ nav.navbar a:hover:after, nav.navbar a:focus:after {
 	}
 	.section-4-top-left, .section-3-bottom-left, .section-3-top-right, .section-2-bottom-right, .section-2-top-left, .section-1-bottom-left {
 		display: none;
-	}
-	.modal .content form button {
-		margin-top: 10px;
 	}
 }
