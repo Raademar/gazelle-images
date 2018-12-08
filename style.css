@@ -475,7 +475,11 @@ footer {
   font-size: 14px;
   padding: 8px;
   border: 1px solid transparent;
-  border-bottom-color: #444444;
+	border-bottom-color: #444444;
+	transition: .2s ease-in-out all;
+}
+.modal .content input:focus {
+	border-bottom-color: #0FB9B1;
 }
 
 .modal .content button[type="submit"]{
@@ -555,4 +559,76 @@ nav.navbar a:hover:after, nav.navbar a:focus:after {
 	transition: opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
 	transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+/* MOBILE STYLES */
+@media screen and (max-width: 400px) {
+	.landing-page {
+		height: 100vh;
+		width: 100vw;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		position: relative;
+	}
+	.landing-page-bg {
+		position: absolute;
+		top: -500px;
+		transform: rotate(20deg);
+	}
+	.navbar {
+		height: 10vh;
+	}
+	.navbar .nav-logo {
+		width: 60px;
+		height: 60px;
+	}
+	.hero-text {
+		line-height: 2rem;
+		text-align: center;
+		z-index: 10;
+		margin-top: 5vh;
+	}
+	.hero-text h1 {
+		font-size: 2rem;
+	}
+	.hero-text h2 {
+		font-size: 1.2rem;
+	}
+	.hero-text h3 {
+		font-size: 0.8rem;
+	}
+	.image-preview {
+		width: 75vw;
+		height: 40vh;
+		background: url('/assets/images/hero_image.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-radius: 5px;
+		position: relative;
+	}
+	.image-preview-pixelated {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url('/assets/images/hero_image_pixelated.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-radius: 5px;  
+		z-index: 99;
+		animation-name: fadeOut;
+		animation-duration: 8s;
+		animation-iteration-count: infinite;
+	}
+	.section-4-top-left, .section-3-bottom-left, .section-3-top-right, .section-2-bottom-right, .section-2-top-left, .section-1-bottom-left {
+		display: none;
+	}
+	.modal .content form button {
+		margin-top: 10px;
+	}
 }
