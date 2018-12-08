@@ -10,8 +10,22 @@ body {
 }
 .landing-page-bg {
   position: absolute;
-  top: -420px;
+  top: -300px;
   transform: rotate(20deg);
+}
+.landing-page-bg-4k {
+	display: none;
+}
+@media screen and (min-width: 1460px) {
+	.landing-page-bg {
+		display: none;
+	}
+	.landing-page-bg-4k {
+		position: absolute;
+		display: block;
+		top: -1300px;
+		transform: rotate(20deg);
+	}
 }
 .landing-page {
 	height: 100vh;
@@ -36,10 +50,6 @@ body {
   }
 }
 .code-snippet-page {
-  /* background: url('/assets/images/updated_bg_shawed.png');
-	background-position: 90% 10%;
-	background-repeat: no-repeat;
-  background-size: cover; */
 	position: relative;
 	width: 100vw;
 	display: flex;
