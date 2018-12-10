@@ -26,13 +26,11 @@ const prog_langs = document.querySelectorAll('.swiper-header ul li');
       }else{
         element.classList.remove('active');
       }
-      console.log('shit')
     }
 
     swiper.on('slideChange', () => setActiveClass());
 
     setTimeout(() => {
-      console.log('added active class');
       if(index === 0){
         element.classList.add('active');
       }
