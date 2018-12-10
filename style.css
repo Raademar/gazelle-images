@@ -5,6 +5,12 @@ body {
 	box-sizing: border-box;
   overflow-x: hidden;
 }
+
+.horizontal-margin{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .no-scroll {
   overflow: hidden;
 }
@@ -337,7 +343,7 @@ a:visited {
 	background-position: center;
   background-repeat: no-repeat;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.50);
-	margin: 5px;
+	margin: 8px;
 	color: #fff;
 	display: flex;
 	flex-direction: column;
