@@ -3,16 +3,44 @@ const modalContent            = document.querySelector('.modal .content');
 const modalBackground         = document.querySelector('.modal .background');
 const getStartedBtns          = document.querySelectorAll('.get-started');
 let   keys                    = {37: 1, 38: 1, 39: 1, 40: 1};                  // Keys to disable scroll
-const body                    = document.body
-let   currentScrollPosFromTop = document.documentElement.scrollTop
-  
+const body                    = document.body;
+let   currentScrollPosFromTop = document.documentElement.scrollTop;
+const prog_langs = document.querySelectorAll('.swiper-header ul li');  
   // Swiper init
   const swiper = new Swiper('.swiper-container', {
     pagination: {
       el: '.swiper-pagination',
     },
   });
+
   
+  prog_langs.forEach((element, index) => {
+    element.addEventListener('click', () => {
+      swiper.slideTo(index, 400);
+    });
+
+    const setActiveClass = () => {
+      if(swiper.activeIndex === index){
+        element.classList.add('active');
+      }else{
+        element.classList.remove('active');
+      }
+      console.log('shit')
+    }
+
+    swiper.on('slideChange', () => setActiveClass());
+
+    setTimeout(() => {
+      console.log('added active class');
+      if(index === 0){
+        element.classList.add('active');
+      }
+    }, 200);
+
+  });
+  
+  
+
   /**
   * toggleModal
   * @param {string} state Sets the state of the modal, etc: open, close, toggle

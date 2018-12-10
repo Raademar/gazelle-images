@@ -80,6 +80,40 @@ body {
   width: 60vw !important;
   border: 1px solid #e6e6e6;
 }
+.swiper-header ul{
+  display: flex;
+  align-items: flex-end;
+  list-style: none;
+  height: 80px;;
+  margin: 12px;
+  margin-bottom: 0px;
+  padding: 4px;
+  padding-bottom: 0px;
+  border-bottom: 1px solid #e6e6e6;
+  transform: translateY(1px);
+}
+.swiper-header ul li{
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */  
+  padding: 8px;
+  margin-right: 8px;
+  width: 48px;
+  display: inline-block;
+  border: 1px solid #e6e6e6;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-color: transparent;
+  transition: .2s border;
+  transform: translateY(1px);
+}
+
+.swiper-header ul li.active{
+  border-bottom: 8px solid transparent;
+}
+
 .swiper-container img{
   width: 100%;
 }
