@@ -136,7 +136,7 @@ body {
 	width: 100%;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 860px) {
   .pricing-page{
     height: 100vh;
   }
@@ -336,6 +336,15 @@ a:visited {
 	justify-content: center;
 	align-content: space-around;
 	flex-wrap: wrap;
+}
+@media screen and (max-width: 860px) {
+  .holder-place {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+  }
 }
 .placeholder {
 	width: 405px;
