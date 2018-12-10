@@ -99,6 +99,12 @@ const searchDocs = document.querySelector('#search-docs');
 let timeout = null;
 
 const makeFirstLetterUppercase = (string) => {
+  if (searchDocs.value === '') {
+    while(documentationResult.childElementCount > 1) {
+      documentationResult.removeChild(documentationResult.lastChild);
+    }
+    return;
+  }
   string = string.toLowerCase();
   let arr = string.split('');
   arr[0] = arr[0].toUpperCase();
@@ -108,18 +114,14 @@ const makeFirstLetterUppercase = (string) => {
 
 const renderSearchResult = (searchQuery) => {
   const a = document.createElement('a');
-  a.href = '#';
+  a.href = '#documentation-result';
   a.textContent = searchQuery
   documentationResult.appendChild(a);
 };
-
-// searchDocs.addEventListener('input', (event) => {
-//   renderSearchResult(makeFirstLetterUppercase(event.target.value));
-// });
 
 searchDocs.onkeyup = function () {
   clearTimeout(timeout);
   timeout = setTimeout(function () {
     renderSearchResult(makeFirstLetterUppercase(searchDocs.value));
-  }, 500);
+  }, 800);
 };

@@ -420,11 +420,17 @@ a:visited {
 .docs-ul li {
   margin-right: 10px;
 }
-.docs-ul a {
+.documentation-box a {
   color: #0FB9B1;
 }
-.docs-ul a:hover {
+.documentation-box a:hover {
   color: rgb(22, 151, 145);
+}
+.documentation-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
 }
 footer {
 	background: url(/assets/images/updated_bg_2.png);
