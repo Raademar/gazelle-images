@@ -10,11 +10,18 @@ body {
 }
 .landing-page-bg {
   position: absolute;
-  top: -300px;
+  top: -500px;
   transform: rotate(20deg);
 }
 .landing-page-bg-4k {
 	display: none;
+}
+@media screen and (min-width: 1000px) {
+  .landing-page-bg {
+    position: absolute;
+    top: -420px;
+    transform: rotate(20deg);
+  }
 }
 @media screen and (min-width: 1460px) {
 	.landing-page-bg {
@@ -385,10 +392,33 @@ a:visited {
   margin-bottom: -35px;
 }
 .documentation-box {
-	width: 850px;
-	height: 310px;
-	background: grey;
-	margin-bottom: 5px;
+	width: 65vw;
+	height: 40vh;;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search-docs {
+  width: 90%;
+  height: 5vh;
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+.docs-ul {
+  display: flex;
+  list-style-type: none;
+  color: #0FB9B1;
+}
+.docs-ul li {
+  margin-right: 10px;
+}
+.docs-ul a {
+  color: #0FB9B1;
+}
+.docs-ul a:hover {
+  color: rgb(22, 151, 145);
 }
 footer {
 	background: url(/assets/images/updated_bg_2.png);
