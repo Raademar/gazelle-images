@@ -534,6 +534,10 @@ footer {
   }
 }
 
+/*
+* Modal styles
+*/
+
 .modal{
   position: fixed;
   width: 100vw;
@@ -655,7 +659,11 @@ nav.navbar a:hover:after, nav.navbar a:focus:after {
 	transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s;
 	transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s, -webkit-transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-/* MOBILE STYLES */
+
+/*
+* MOBILE STYLES
+*/
+
 @media screen and (max-width: 600px) {
 	.landing-page {
 		height: 100vh;
@@ -723,4 +731,12 @@ nav.navbar a:hover:after, nav.navbar a:focus:after {
 	.section-4-top-left, .section-3-bottom-left, .section-3-top-right, .section-2-bottom-right, .section-2-top-left, .section-1-bottom-left {
 		display: none;
 	}
+}
+
+/*
+* Helper Classes
+*/
+
+.mb {
+  margin-bottom: 20px;
 }
