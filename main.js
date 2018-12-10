@@ -94,17 +94,32 @@ function enableScroll() {
   document.onkeydown  = null;
 }
 
-const documentation = document.querySelector('.documentation-box');
+const documentationResult = document.querySelector('.documentation-result');
 const searchDocs = document.querySelector('#search-docs');
+let timeout = null;
 
 const makeFirstLetterUppercase = (string) => {
-  string = string.toLowerCase()
-  let arr = string.split('')
-  arr[0] = arr[0].toUpperCase()
-  string = arr.join('')
-  return string
-}
+  string = string.toLowerCase();
+  let arr = string.split('');
+  arr[0] = arr[0].toUpperCase();
+  string = arr.join('');
+  return string;
+};
 
-searchDocs.addEventListener('input', (event) => {
-  console.log(makeFirstLetterUppercase(event.target.value))
-})
+const renderSearchResult = (searchQuery) => {
+  const a = document.createElement('a');
+  a.href = '#';
+  a.textContent = searchQuery
+  documentationResult.appendChild(a);
+};
+
+// searchDocs.addEventListener('input', (event) => {
+//   renderSearchResult(makeFirstLetterUppercase(event.target.value));
+// });
+
+searchDocs.onkeyup = function () {
+  clearTimeout(timeout);
+  timeout = setTimeout(function () {
+    renderSearchResult(makeFirstLetterUppercase(searchDocs.value));
+  }, 500);
+};
