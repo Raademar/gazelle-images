@@ -6,7 +6,7 @@ let   keys                    = {37: 1, 38: 1, 39: 1, 40: 1};                  /
 const body                    = document.body;
 let   currentScrollPosFromTop = document.documentElement.scrollTop;
 const prog_langs = document.querySelectorAll('.swiper-header ul li');
-  
+
   // Swiper init
   const swiper = new Swiper('.swiper-container', {
     pagination: {
@@ -40,43 +40,6 @@ const prog_langs = document.querySelectorAll('.swiper-header ul li');
 
   });
   
-  
-
-  /**
-  * toggleModal
-  * @param {string} state Sets the state of the modal, etc: open, close, toggle
-  */
-  const toggleModal = (state) => {
-    const modal           = document.querySelector('.modal');
-    const modalBackground = document.querySelector('.modal .background');
-    
-    const openModal = () => {
-      modal.classList.add('open');
-      modalBackground.addEventListener('click', () => {
-        closeModal();
-      });
-      disableScroll();
-    }
-    
-    const closeModal = () => {
-      modal.classList.remove('open');
-      // modalBackground.removeEventListener('click');
-      enableScroll();
-    }
-    
-    if(state === 'open'){
-      openModal();
-    }else if(state === 'close'){
-      closeModal();
-    }else{
-      if(modal.classList.contains('open')){
-        closeModal();
-      }else{
-        openModal();
-      }
-    }
-  };
-
 /**
 * toggleModal
 * @param {string} state Sets the state of the modal, etc: open, close, toggle
