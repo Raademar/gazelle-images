@@ -100,6 +100,7 @@ body {
   transform: translateY(1px);
 }
 .swiper-header ul li{
+  cursor: pointer;
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
