@@ -50,16 +50,6 @@ body {
   align-items: center;
   position: relative;
 }
-@media screen and (max-width: 1460px){
-  .landing-page button{
-    margin-left: 180px;
-  }
-}
-@media screen and (max-width: 660px){
-  section.landing-page button{
-    margin-left: 0px;
-  }
-}
 .section-1-bottom-left {
   position: absolute;
 	bottom: 0px;
