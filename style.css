@@ -525,6 +525,7 @@ footer {
 }
 .footer-content-box ul a {
   color: #fff;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 500px) {
