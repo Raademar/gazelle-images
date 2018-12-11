@@ -26,7 +26,7 @@ body {
   .landing-page-bg {
     position: absolute;
     top: -300px;
-    transform: rotate(20deg);
+    transform: rotate(15deg);
   }
 }
 @media screen and (min-width: 1460px) {
@@ -41,7 +41,8 @@ body {
 	}
 }
 .landing-page {
-	height: 100vh;
+  height: 100vh;
+  min-height: 910px;
 	width: 100vw;
   color: #fff;
 	display: flex;
