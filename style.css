@@ -528,6 +528,20 @@ footer {
   text-decoration: underline;
 }
 
+@media screen and (min-width: 460px){
+  .footer-content-box ul a {
+    margin: 0 3px;
+  }
+}
+
+@media screen and (min-width: 560px){
+  .footer-content-box ul a {
+    margin: 0 6px;
+  }
+}
+
+
+
 @media screen and (max-width: 500px) {
   .documentation-box {
     width: 100%;
