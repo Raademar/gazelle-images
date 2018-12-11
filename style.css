@@ -16,7 +16,7 @@ body {
 }
 .landing-page-bg {
   position: absolute;
-  top: -500px;
+  top: -400px;
   transform: rotate(20deg);
 }
 .landing-page-bg-4k {
@@ -25,7 +25,7 @@ body {
 @media screen and (min-width: 1000px) {
   .landing-page-bg {
     position: absolute;
-    top: -420px;
+    top: -300px;
     transform: rotate(20deg);
   }
 }
