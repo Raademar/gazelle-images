@@ -163,7 +163,7 @@ body {
 }
 .compare-images-page .text-holder {
 	width: 40%;
-	min-width: 360px;
+	min-width: 320px;
 	max-width: 768px;
 	margin: 8px;
 }
@@ -250,6 +250,7 @@ body {
   text-align: left;
   z-index: 10;
 }
+
 .image-preview {
   width: 35vw;
   height: 50vh;
@@ -453,7 +454,6 @@ a:visited {
 }
 .documentation-box {
 	width: 65vw;
-	height: 40vh;;
   margin-bottom: 5px;
   display: flex;
   flex-direction: column;
@@ -470,10 +470,18 @@ a:visited {
   display: flex;
   list-style-type: none;
   color: #0FB9B1;
+  padding: 12px;
 }
 .docs-ul li {
   margin-right: 10px;
 }
+
+@media screen and (max-width: 340px){
+  .docs-ul li {
+    font-size: 12px;
+  }
+}
+
 .documentation-box a {
   color: #0FB9B1;
 }
@@ -484,7 +492,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
+  
 }
 footer {
 	background: url(/assets/images/updated_bg_2.png);
@@ -596,10 +604,6 @@ footer {
 	margin-top: 10px;
 }
 
-.modal .content .text-center{
-  text-align: center;
-}
-
 .modal .background{
   background: #2222229c;
   width: 100%;
@@ -693,7 +697,14 @@ nav.navbar a:hover:after, nav.navbar a:focus:after {
 		text-align: center;
 		z-index: 10;
 		margin-top: 5vh;
-	}
+  }
+  
+  @media screen and (max-width: 460px){
+    .hero-text{
+      margin-top: 120px;
+    }
+  }
+  
 	.hero-text h1 {
 		font-size: 2rem;
 	}
@@ -740,4 +751,22 @@ nav.navbar a:hover:after, nav.navbar a:focus:after {
 
 .mb {
   margin-bottom: 20px;
+}
+
+.text-center{
+  text-align: center;
+}
+
+@media screen and (max-width: 500px){
+  .mt-mobile{
+    margin-top: 40px;
+  }
+  
+  .mb-mobile {
+    margin-bottom: 20px;
+  }
+
+  .text-center-mobile{
+    text-align: center;
+  }
 }
