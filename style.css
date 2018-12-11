@@ -669,7 +669,7 @@ nav.navbar a:hover:after, nav.navbar a:focus:after {
 * MOBILE STYLES
 */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 	.landing-page {
 		height: 100vh;
 		width: 100vw;
