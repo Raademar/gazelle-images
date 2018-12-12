@@ -780,13 +780,17 @@ nav.navbar a:hover:after, nav.navbar a:focus:after {
   text-align: center;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
   .mt-mobile{
     margin-top: 40px;
   }
   
   .mb-mobile {
     margin-bottom: 20px;
+  }
+
+  .hide-on-mobile{
+    display: none;
   }
 
   .text-center-mobile{
